@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "94e744c9-fb08-4830-a02c-3e8770d8fd7d",
+		"name": "booking api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8149533"
+	},
+	"item": [
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "N7fp6GTjO9CJD1QIhqv0Ty1ZZbJeS3tFIbToFJZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"periods\": [\n        {\n            \"check_in\": \"13-02-2023\",\n            \"check_out\": \"15-02-2023\"\n        },\n                {\n            \"check_in\": \"15-02-2023\",\n            \"check_out\": \"16-02-2023\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://booking-api.test/api/v1/bookings",
+							"protocol": "http",
+							"host": [
+								"booking-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "N7fp6GTjO9CJD1QIhqv0Ty1ZZbJeS3tFIbToFJZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://booking-api.test/api/v1/bookings",
+							"protocol": "http",
+							"host": [
+								"booking-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
