@@ -21,16 +21,16 @@ Setup configuration:
 cp .env.example .env
 ```
 
-Run:
-
-```sh
-php artisan key:generate
-```
-
 Start Sail
 
 ```sh
 ./vendor/bin/sail up -d
+```
+
+Run:
+
+```sh
+./vendor/bin/sail artisan key:generate
 ```
 
 Run database migrations with seeders:
